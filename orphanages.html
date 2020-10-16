@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Localize um orfanato Happy</title>
+
+    <!--ADICIONA CLASSES CRIADAS COM CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+    <link rel="icon" href="./public/images/logo-icon.png" />
+    <link rel="stylesheet" href="./public/css/animations.css" />
+    <link rel="stylesheet" href="./public/css/main.css" />
+    <link rel="stylesheet" href="./public/css/page-orphanages.css" />
+
+    <!--ADICONA FONTE PERSONALIZADA DE UM LINK -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    
+      <div id="page-orphanages"> <!--inicio page orphanages-->
+
+        <aside class="animate-rigth"> <!--barra lateral -->
+
+          <header><!--cabeçaho-->
+            <img src="./public/images/map-marker.svg" alt="Happy"><!--foto logo do cabeçalho-->
+
+            <h2>Escolha um orfanato no mapa</h2>
+            
+            <p>Muitas crianças estão esperando sua visita ;)</p>
+
+          </header><!--final cabeçaho-->
+
+          <footer><!--inicio tag footer define um rodape-->
+            <strong>Paraíba</strong> <!--negrito-->
+            <p>João Pessoa</p><!--paragrafo-->
+          </footer><!--final tag footer-->
+
+        </aside><!--fim barra lateral-->
+
+         <div id="mapid" class="animate-appear"></div>
+
+         <a href="create-orphanage.html" class="create-orphanage" title="Cadastre un orfanato"><!--cria botao create-->
+             <img src="./public/images/plus.svg" alt="Criar Orfanato"><!--adiciona imagem do botao-->
+         </a>
+          
+
+      </div> <!--final page orphanage-->
+
+
+      <script src="./public/scripts/page-orphanages.js"></script> 
+  </body>
+</html>

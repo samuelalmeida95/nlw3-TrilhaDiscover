@@ -1,0 +1,108 @@
+#page-orphanages {
+  width: 100%; /* largura do elemento*/
+  height: 100%; /* altura do elemento*/
+
+  display: flex; /* Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens.*/
+}
+
+aside {
+  width: clamp(24rem, 25vw, 44rem); /* largura do elemento*/
+  background: linear-gradient(329.54deg, #15b6d6 0%, #15d6d6 100%);
+  padding: clamp(3rem, 5vw, 8rem); /*preenchimento*/
+
+  flex-direction: column; /* Os itens ficam em uma única coluna, um embaixo do outro.*/
+  display: flex; /* Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens.*/
+  justify-content: space-between; /* Cria um espaçamento igual entre os elementos. Mantendo o primeiro grudado no início e o último no final.*/
+}
+
+aside h2 {
+  margin-top: 6.4rem;
+
+  font: 800 clamp(2rem, 5vw, 3.6rem) / 1.1 "Nunito", sans-serif;
+}
+
+aside p {
+  margin-top: 2.4rem;
+
+  font: 400 1.6/1.5 "Nunito", sans-serif;
+}
+
+aside footer {
+  margin-top: 0.8rem;
+}
+
+#mapid {
+  width: 100%;
+  height: 100%;
+
+  animation-delay: 200ms;
+}
+
+/*Button*/
+
+a.create-orphanage {
+  position: absolute;
+  right: 25px;
+  bottom: 20px;
+  z-index: 10;
+
+  width: 6.4rem;
+  height: 6.4rem;
+  background: #15c3d6;
+  border: 0;
+  border-radius: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 200ms;
+}
+
+a.create-orphanage:hover {
+  background: #17d6eb;
+}
+
+.leaflet-popup-content-wrapper {
+  background: rgba(255, 255, 255, 0.8);
+
+  border-radius: 20px;
+}
+
+.leaflet-popup-content { /*configuração do "balao" dentro do popup lar das meninas */
+    color: #0089a5;
+  
+    font-weight: 600;
+    margin: .8rem 1.2rem;
+  
+    display: flex;/* Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens.*/
+    align-items: center;
+    justify-content: space-between;/* Cria um espaçamento igual entre os elementos. Mantendo o primeiro grudado no início e o último no final.*/
+  }
+
+.leaflet-popup-content a { /*configuração do botão de dentro do popup lar das meninas */
+  width: 4rem;
+  height: 4rem;
+  background: #15c3d6;
+  box-sizing: 17.2828px 27.6589px rgba(23, 142, 166, 0.16);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;/* Cria um espaçamento igual entre os elementos. Mantendo no centro.*/
+
+  transition: background-color 0.2s;
+}
+
+.leaflet-popup-content a:hover { /*muda cor do botão dentro do popup lar das meninas*/
+    background: #17d6eb;
+  }
+
+  .leaflet-popup-tip {
+    display: flex;
+}
+
+.leaflet-container { /*configuração do texto dentro do popup lar das meninas*/
+    font: 800 2rem/1 "Nunito", sans-serif;
+  
+    z-index: 5;
+  }

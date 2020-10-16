@@ -1,0 +1,122 @@
+#page-landing {
+  /* configurações do elemento */
+  background: linear-gradient(
+    329.54deg,
+    #29b6d1 0%,
+    #00c7c7 100%
+  ); /*cor de fundo do elemento */
+
+  text-align: center; /*alinhamento do elemento*/
+  min-height: 100vh; /*altura minima do elemento*/
+
+  display: flex;
+}
+
+#page-container {
+  /* configuração do elemento */
+  margin: auto; /* margem do elemnto*/
+
+  width: min(90%, 112rem); /* configurações da largura do elemento */
+}
+
+.location,  /* configurações de altura desses elementos */
+h1,
+.visit p {
+  height: 20vh;
+}
+
+#logo {
+  animation-delay: 50ms;
+}
+
+.location {
+  animation-delay: 100ms;
+}
+
+main h1 {
+  animation-delay: 150ms;
+  font-size: clamp(4rem, 8vw, 8.4rem);
+}
+
+.visit p {
+  animation-delay: 200ms;
+}
+
+.visit a {
+  /* configurações do elemento na tag a */
+
+  width: 8rem; /*Peso do texto do elemnto  */
+  height: 8rem; /* Altura do texto do elemento */
+  background: #ffd666; /* cor do fundo do elemento */
+
+  border: none; /*borda do elemento */
+  border-radius: 3rem; /*formato da borda do elemento */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: auto;
+
+  transition: background 200ms; /* TEMPO DE ANIMAÇÃO DO BOTÃO*/
+  animation-delay: 200ms;
+}
+.visit a:hover {
+  /* MUDA COR DO BOTÃO*/
+  background: #96feff;
+}
+
+/*desktop version */
+@media (min-width: 760px) {
+  #page-container {
+    padding: 5rem 2rem;
+    /*shorthand background: image repeat position / size */
+    background: url(../images/bg.svg) no-repeat 80% / 
+    clamp(30rem, 54vw, 56rem);
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .location,
+  h1,
+  .visit p {
+    height: initial;
+    text-align: initial;
+  }
+
+  .location {
+    text-align: right;
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+
+  main h1 {
+    line-height: 0.88;
+    font-weight: bold;
+
+    margin: clamp(10%, 9vh, 12%) 0 4rem;
+
+    width: min(300px, 80%);
+  }
+
+  .visit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .visit p {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    width: clap(20rem, 20vw, 30rem);
+  }
+
+  .visit a {
+    margin: initial;
+  }
+  
+}

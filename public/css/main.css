@@ -1,0 +1,22 @@
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}  /*  ? */
+
+body {    /* configuração de altura e cor da fonte */
+  height: 100vh;
+  color: white;
+  background: #EBF2F5;
+}
+
+:root {   /*Configuração de tamanho de fonte geral  */
+  font-size: 62.5%;
+}
+
+body,
+input,
+button,    /* configurações de corpo, entrada, margem inferior e area de texto(fontes) */
+textarea {
+  font: 400 1.8rem/1 "Nunito", sans-serif;
+}
