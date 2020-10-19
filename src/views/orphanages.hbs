@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Localize um orfanato Happy</title>
+
+    <!--ADICIONA CLASSES CRIADAS COM CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <link rel="icon" href="/images/logo-icon.png" />
+    <link rel="stylesheet" href="/css/animations.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/map.css" />
+    <link rel="stylesheet" href="/css/buttons.css" />
+    <link rel="stylesheet" href="/css/page-orphanages.css" />
+
+    <!--ADICONA FONTE PERSONALIZADA DE UM LINK -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="page-orphanages">
+      <!--inicio page orphanages-->
+
+      <aside class="animate-rigth">
+        <!--barra lateral -->
+
+        <header>
+          <!--cabeçaho-->
+          <img
+            src="/images/map-marker.svg"
+            alt="Happy"
+          /><!--foto logo do cabeçalho-->
+
+          <h2>Escolha um orfanato no mapa</h2>
+
+          <p>Muitas crianças estão esperando sua visita ;)</p>
+        </header>
+        <!--final cabeçaho-->
+
+        <footer>
+          <!--inicio tag footer define um rodape-->
+          <strong>Paraíba</strong>
+          <!--negrito-->
+          <p>João Pessoa</p>
+          <!--paragrafo-->
+        </footer>
+        <!--final tag footer-->
+      </aside>
+      <!--fim barra lateral-->
+
+      <div id="mapid" class="animate-appear"></div>
+
+      <div class="orphanages">
+        {{#each orphanages}}
+        
+          <span hidden
+            data-id="{{this.id}}"
+            data-name="{{this.name}}"
+            data-lat="{{this.lat}}"
+            data-lng="{{this.lng}}"
+          ></span>
+
+        {{/each}}  
+
+      </div>
+      
+
+
+      <a
+        href="create-orphanage"
+        class="create-orphanage"
+        title="Cadastre un orfanato"
+        ><!--cria botao create-->
+        <img
+          src="/images/plus.svg"
+          alt="Criar Orfanato"
+        /><!--adiciona imagem do botao-->
+      </a>
+    </div>
+    <!--final page orphanage-->
+
+    <script src="/scripts/page-orphanages.js"></script>
+  </body>
+</html>
