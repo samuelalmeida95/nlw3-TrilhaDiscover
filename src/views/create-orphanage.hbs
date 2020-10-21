@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lar das meninas</title>
+    <title>Adicionar um orfanato | Happy</title>
 
-    <!--ADICIONA CLASSES CRIADAS COM CSS -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -13,6 +12,7 @@
       crossorigin=""
     />
 
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script
       src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
       integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
@@ -20,23 +20,23 @@
     ></script>
 
     <link rel="icon" href="/images/logo-icon.png" />
-    <link rel="stylesheet" href="/css/animations.css" />
+
     <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
     <link rel="stylesheet" href="/css/sidebar.css" />
     <link rel="stylesheet" href="/css/map.css" />
     <link rel="stylesheet" href="/css/form.css" />
     <link rel="stylesheet" href="/css/buttons.css" />
     <link rel="stylesheet" href="/css/page-create-orphanage.css" />
 
-    <!--ADICONA FONTE PERSONALIZADA DE UM LINK -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <div id="page-create-orphanage">
-      <aside class="animate-rigth sidebar">
+      <aside class="animate-right sidebar">
         <img src="/images/map-marker.svg" alt="Happy" />
 
         <footer>
@@ -46,15 +46,15 @@
         </footer>
       </aside>
 
-      <main class="animate-appear width-sidebar">
-        <form action="">
+      <main class="animate-appear with-sidebar">
+        <form action="save-orphanage" method="post" onsubmit="validate(event)">
           <fieldset>
             <legend>Dados</legend>
 
             <div class="map-container">
               <div id="mapid"></div>
-              <input type="hidden" name="lat">
-              <input type="hidden" name="lng">
+              <input type="hidden" name="lat" />
+              <input type="hidden" name="lng" />
 
               <footer>
                 <a href="#" id="select-point">
@@ -70,13 +70,13 @@
 
             <div class="input-block">
               <label for="about"
-                >Sobre <span>Máximo de 300 caracteres</span></label
+                >Sobre <span>Máximo de 300 catacteres</span></label
               >
               <textarea id="about" name="about" required></textarea>
             </div>
 
             <div class="input-block">
-              <label for="whatsapp">Número de Whatsapp</label>
+              <label for="whatsapp">Número de whatsapp</label>
               <input id="whatsapp" name="whatsapp" required />
             </div>
 
@@ -89,18 +89,20 @@
                     name="images"
                     placeholder="Cole o link da foto aqui"
                     required
+                    type="url"
                   />
-                  <span onclick = "deleteField(event)">
+                  <span onclick="deleteField(event)">
                     <img
                       src="/images/remove-file.svg"
                       alt="Remover Foto"
-                  /></span>
+                    />
+                  </span>
                 </div>
               </div>
 
-              <button onclick="addPhotoField()" 
-                type="button">
-                <img src="/images/add-file.svg" alt="Nova-imagem" />
+              <button onclick="addPhotoField()"
+              type="button">
+                <img src="/images/add-file.svg" alt="Nova imagem" />
               </button>
             </div>
           </fieldset>
@@ -118,29 +120,29 @@
             </div>
 
             <div class="input-block">
-              <label for="opening-hours">Horarios das visitas</label>
-              <input id="opening-hours" name="opening-hours" required />
+              <label for="opening_hours">Horário das visitas</label>
+              <input id="opening_hours" name="opening_hours" required />
             </div>
 
             <div class="input-block">
-              <label for="open-on-weekends">Atende fim de semana?</label>
+              <label for="open_on_weekends ">Atende fim de semana?</label>
               <input
                 type="hidden"
-                id="open-on-weekends"
-                name="open-on-weekends"
+                id="open_on_weekends"
+                name="open_on_weekends"
                 value="1"
                 required
-              /> <!-- video parou em 1h-->
+              />
 
               <div class="button-select">
                 <button data-value="1"
-                onclick="toggleSelect(event)" 
-                type="button" 
-                class="active">Sim</button>
+                  onclick="toggleSelect(event)" 
+                  type="button" 
+                  class="active">Sim</button>
                 <button data-value="0"
-                onclick="toggleSelect(event)" 
-                type="button"
-                >Não</button>
+                  onclick="toggleSelect(event)" 
+                  type="button"  
+                  >Não</button>
               </div>
 
               <button type="submit" class="primary-button">Confirmar</button>
